@@ -9,50 +9,68 @@ V(r,Z):=quad_qags(Az(r,z,1), z, 0, Z)[1];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-halve (r,target,min,max):= ([xz,x1,delta,last_err,err,i,value], 
-                            xz:float(min),value:V(r,xz),last_err:float(abs(value-target)), delta:float((max-min)/2),
-           i:0,
-           do (i:i+1,
-               if (i>20) then throw (1),
-               x1:xz,
-               xz:float(x1+delta),
-               value:float(V(r,xz)),
-               err: float(abs(value-target)),
-               if (err<1e-6) then return(x) else(
-               if (err<last_err) then (last_err:err,print("branch a")) else (xz:x1,print("branch b")),
-               delta:delta/2,
-               print("xz",xz,"value",value,"x1",x1,"delta",delta,"err",err,"last_err",last_err,"V",V))
-              ));
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 newton(r,target,estimate):= ([i,x,delta], 
            x:estimate,
            i:0,
-           delta:1,
+           delta:1e-3,
            f:V(r,x)-target,
            do (i:i+1,
-               if (i>30) then throw (1),
+               if (i>50) then throw (1),
                df:(V(r,x+delta/2)-V(r,x-delta/2))/delta,
                x:x-f/df,
                f:V(r,x)-target,
-               //print("i",i,"x",x,"f",f,"df",df),
-               if (abs(f)<1e-200) then return(x)
+               /*print("i",i,"x",x,"f",f,"df",df),*/
+               if (abs(f)<1e-10) then return(x)
                
               ));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-newton(0.2,V0,1);
+newton(0,V0,0.1);
+newton(0.1,V0,%);
+newton(0.2,V0,%);
+newton(0.3,V0,%);
+newton(0.4,V0,%);
+newton(0.5,V0,%);
+newton(0.6,V0,%);
+newton(0.7,V0,%);
+newton(0.8,V0,%);
+newton(0.9,V0,%);
+newton(0.9999999,V0,%);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-halve(0.1,V0,0,Z0);
+vect(min,max,steps):=block([M,i,st],
+                      st:(max-min)/steps,
+                      M:[0],
+                      for i:min step st thru max do ( 
+                                                     M:append(M,[float(i)])
+                                                    
+                                                     ),
+                      return(M)
+                     );
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-V(0.1,0.125);
-V(0.1,0.125);
+vect(0,1,100);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+nvect(target,min,max,steps):=block([M,i,st,value],
+                      st:(max-min)/steps,
+                      value:newton(min,target,1),
+                      M:[value],
+                      for i:min step st thru max do (
+                                                     value:newton(float(i),target,value), 
+                                                     M:append(M,[value]),
+                                                     print(M)
+                                                    ),
+                      return(M)
+                     );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+nvect(V0,0,1,100);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
