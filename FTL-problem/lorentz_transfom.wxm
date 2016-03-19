@@ -1,0 +1,89 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 11.04.0 ] */
+
+/* [wxMaxima: input   start ] */
+gama:1/sqrt(1-beta^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lorentz_transform:matrix([gama,-gama*beta,0,0],[-gama*beta,gama,0,0],[0,0,1,0],[0,0,0,1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k:matrix([omega/c,kx,ky,kz]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lambda:1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k:matrix([2*%pi/lambda,2*%pi/lambda,ky,kz]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2:lorentz_transform.k;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+smer_sireni:matrix([t,-x,0,0]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k_vect:smer_sireni;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+arg_exp:smer_sireni.k2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E(t,x,beta):=exp(%i*arg_exp);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E(0,0,1.1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E1(t,x,beta):=exp(%i*(((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*t-((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E2(t,x,beta):=exp(-%i*(((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*t-((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+wxplot3d(E1(t,x,1.1), [t,0,5], [x,0,5])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+wxplot3d(E2(t,x,1.1), [t,0,5], [x,0,5])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E12(t,x,beta):=exp(%i*(((2*%pi)/sqrt(1-beta^2)+(2*%pi*beta)/sqrt(1-beta^2))*t-((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+wxplot3d(E12(t,x,1.1), [t,0,5], [x,0,5])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E13(t,x,beta):=exp(%i*((-(2*%pi)/sqrt(1-beta^2)+(2*%pi*beta)/sqrt(1-beta^2))*t-((2*%pi)/sqrt(1-beta^2)-(2*%pi*beta)/sqrt(1-beta^2))*x));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+wxplot3d(E13(t,x,1.1), [t,0,5], [x,0,5])$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+E1(0,0,0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(E1(0,1,1.1));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
