@@ -1,0 +1,393 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+A:matrix([1,0],[0,1]);
+I:matrix([%i,0],[0,-%i]);
+J:matrix([0,1],[-1,0]);
+K:matrix([0,%i],[%i,0]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+correct4V:matrix([1,0,0,0],[0,-%i,0,0],[0,0,-%i,0],[0,0,0,-%i]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+I .I;
+J .J;
+K .K;
+I .J-K;
+J. K-I;
+K . I-J;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+X4V:transpose(matrix([c*t,%i*x,%i*y,%i*z]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+correct4V.X4V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+invert(correct4V).correct4V.X4V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q:(c*t)*A+%i*x*I+%i*y*J+%i*z*K;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V4to_Q:matrix([A,I,J,K]);
+V4to_CQ:matrix([A,-I,-J,-K]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abcd:transpose(matrix([a,b,c,d]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abcd_Q:V4to_Q.abcd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abcd_CQ:V4to_CQ.abcd;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ijkl:transpose(matrix([%i*i,%i*j,%i*k,%i*l]));
+ijkl_Q:V4to_Q.ijkl;
+V4to_CQ.ijkl+conjugate(transpose(ijkl_Q));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V4to_CQ.abcd-conjugate(transpose(abcd_Q));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q:V4to_Q . X4V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+CQ:V4to_CQ . X4V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q-CQ;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(Q . CQ);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V4to_CQ . X4V-conjugate(transpose(Q));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+QS:1/2*(Q+CQ);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+QV:ratsimp(1/2*(Q-CQ));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+%i.QV . I;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g:(Ar+%i*Ai)*A+(Br+%i*Bi)*I+(Cr+%i*Ci)*J+(Dr+%i*Di)*K;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+gQC:expand((Ar+%i*Ai)*A-(Br+%i*Bi)*I-(Cr+%i*Ci)*J-(Dr+%i*Di)*K);
+gCC:expand((Ar-%i*Ai)*A+(Br-%i*Bi)*I+(Cr-%i*Ci)*J+(Dr-%i*Di)*K);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Tq:expand(gQC . Q .gCC);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Tq_t:substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,Tq))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Tq_x:substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,Tq))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Tq_y:substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,Tq))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Tq_z:substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,Tq))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(1/2*(Tq_t+conjugate(transpose(Tq_t))));
+expand(1/2*(Tq_t-conjugate(transpose(Tq_t))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(1/2*(Tq_x+conjugate(transpose(Tq_x))));
+expand(1/2*(Tq_x-conjugate(transpose(Tq_x))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(1/2*(Tq_y+conjugate(transpose(Tq_y))));
+expand(1/2*(Tq_y-conjugate(transpose(Tq_y))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(1/2*(Tq_z+conjugate(transpose(Tq_z))));
+expand(1/2*(Tq_z-conjugate(transpose(Tq_z))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(1/2*(Tq+conjugate(transpose(Tq))));
+expand(1/2*(Tq-conjugate(transpose(Tq))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(expand(1/2*(Tq+conjugate(transpose(Tq)))));
+imagpart(expand(1/2*(Tq+conjugate(transpose(Tq)))));
+realpart(expand(1/2*(Tq-conjugate(transpose(Tq)))));
+imagpart(expand(1/2*(Tq-conjugate(transpose(Tq)))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*general L matrix*/
+L:matrix([l11,l12,l13,l14],[l12,l22,l23,l24],[l13,l23,l33,l34],[l14,l24,l34,l44]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*SPECIAL RELATIVITY LORENTZ TRANSFORM MATRIX*/
+/*beta_sq:bx^2+by^2+bz^2;
+gama:1/sqrt(1-beta_sq);
+L:matrix([gama,-bx*gama,-by*gama,-bz*gama],[-bx*gama,1+(gama-1)*bx^2/beta_sq,(gama-1)*bx*by/beta_sq,(gama-1)*bx*bz/beta_sq],[-by*gama, (gama-1)*bx*by/beta_sq,1+(gama-1)*by^2/beta_sq,(gama-1)*by*bz/beta_sq],[-bz*gama, (gama-1)*bx*bz/beta_sq,(gama-1)*by*bz/beta_sq,1+(gama-1)*bz^2/beta_sq]);*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+T: invert(correct4V).L.correct4V.X4V;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+TqL: V4to_Q . T;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq:matrix(
+[substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,Tq=TqL))))],
+[substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,Tq=TqL))))],
+[substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,Tq=TqL))))],
+[substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,Tq=TqL))))]
+
+);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_r:expand(transpose(matrix(
+[TqL + conjugate(transpose(TqL))=Tq + conjugate(transpose(Tq))
+])));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_im:expand(transpose(matrix(
+[TqL - conjugate(transpose(TqL))=Tq - conjugate(transpose(Tq))
+
+])));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_r1:transpose( matrix([
+ratsimp(realpart(substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_r)))))/2),
+ratsimp(imagpart(substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_r)))))/2),
+ratsimp(realpart(substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,eq_r)))))/-2),
+ratsimp(imagpart(substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,eq_r)))))/2),
+expand(realpart(substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,eq_r)))))/-2),
+ratsimp(imagpart(substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,eq_r)))))/2),
+expand(realpart(substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,eq_r)))))/-2),
+ratsimp(imagpart(substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,eq_r)))))/2)
+]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_r[1,1])))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+matrix([1,0],[0,0]).eq_r[1,1]. matrix([1,0],[0,0]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_im1:transpose( matrix([
+expand(realpart(substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_im)))))),
+expand(imagpart(substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_im)))))),
+expand(realpart(substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,eq_im)))))),
+expand(imagpart(substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,eq_im)))))),
+expand(realpart(substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,eq_im)))))),
+expand(imagpart(substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,eq_im)))))),
+expand(realpart(substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,eq_im)))))),
+expand(imagpart(substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,eq_im))))))
+]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q-conjugate(transpose(Q));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(1/2*(Q+conjugate(transpose(Q))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+conjugate(transpose(Q));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_s:expand(transpose(matrix([
+    (TqL[1,1]+TqL[2,2]=Tq[1,1]+Tq[2,2])/2,
+    (TqL[1,1]-TqL[2,2]=Tq[1,1]-Tq[2,2])/-2,
+    (TqL[1,2]-TqL[2,1]=Tq[1,2]-Tq[2,1])/(2*%i),
+    (TqL[1,2]+TqL[2,1]=Tq[1,2]+Tq[2,1])/-2    
+])));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_st:substitute(1/c,t,substitute(0,x,substitute(0,y,substitute(0,z,eq_s))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_sx:substitute(0,t,substitute(1,x,substitute(0,y,substitute(0,z,eq_s))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_sy:substitute(0,t,substitute(0,x,substitute(1,y,substitute(0,z,eq_s))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_sz:substitute(0,t,substitute(0,x,substitute(0,y,substitute(1,z,eq_s))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_k:append(eq_st,eq_sx,eq_sy,eq_sz);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_k[1]+eq_k[6];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+qNS:g . gQC;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_qNS:transpose(matrix([
+  realpart(expand((2=qNS[1,1]+qNS[2,2])/2)),
+  imagpart(expand((2=qNS[1,1]+qNS[2,2])/4)) /*,
+  realpart(expand((qNS[1,2]+qNS[2,1]=0)/2)),
+  imagpart(expand((qNS[1,2]+qNS[2,1]=0)/4)),
+  realpart(expand((qNS[1,1]-qNS[2,2]=0)/2)),
+  imagpart(expand((qNS[1,1]-qNS[2,2]=0)/4)),
+  realpart(expand((qNS[1,2]-qNS[2,1]=0)/2)),
+  imagpart(expand((qNS[1,2]-qNS[2,1]=0)/2))*/
+
+]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_k1:append(eq_k,eq_qNS);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_k2:ratsimp(transpose(matrix([
+ratsimp((eq_k1[1]+eq_k1[6]+eq_k1[11]+eq_k1[16])/4),
+ratsimp((eq_k1[1]+eq_k1[6]-eq_k1[11]-eq_k1[16])/4),
+ratsimp((eq_k1[1]-eq_k1[6]+eq_k1[11]-eq_k1[16])/4),
+ratsimp((eq_k1[1]-eq_k1[6]-eq_k1[11]+eq_k1[16])/4),
+ratsimp((eq_k1[2]+eq_k1[5])/4),
+ratsimp((eq_k1[2]-eq_k1[5])/4),
+ratsimp((eq_k1[3]+eq_k1[9])/4),
+ratsimp((eq_k1[3]-eq_k1[9])/4),
+ratsimp((eq_k1[4]+eq_k1[13])/4),
+ratsimp((eq_k1[4]-eq_k1[13])/4),
+ratsimp((eq_k1[7]+eq_k1[10])/4),
+ratsimp((eq_k1[7]-eq_k1[10])/-4),
+ratsimp((eq_k1[8]+eq_k1[14])/4),
+ratsimp((eq_k1[8]-eq_k1[14])/4),
+ratsimp((eq_k1[12]+eq_k1[15])/4),
+ratsimp((eq_k1[12]-eq_k1[15])/-4),
+ratsimp((eq_k1[1]+eq_k1[17])/2),
+ratsimp((eq_k1[1]-eq_k1[17])/2),
+ratsimp((eq_k1[6]-eq_k1[17])/2),
+ratsimp((eq_k1[6]+eq_k1[17])/2),
+ratsimp((eq_k1[11]+eq_k1[17])/2),
+ratsimp((eq_k1[11]-eq_k1[17])/2),
+ratsimp((eq_k1[16]-eq_k1[17])/2),
+ratsimp((eq_k1[16]+eq_k1[17])/2),
+factor((eq_k1[17]+2*%i*eq_k1[18]))
+])));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*solution g is from M Ai=0,Br=0,Cr=0,Dr=0 */
+
+gM:gfactor(expand(substitute(0,Ai,substitute(0,Br,substitute(0,Cr,substitute(0,Dr,eq_k2))))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+check:transpose(matrix([
+ratsimp(gM[1]-gM[17]),
+ratsimp(gM[2]-gM[19]),
+ratsimp(gM[3]-gM[22]),
+ratsimp(gM[4]-gM[23])
+]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*solution g is real quaternion Ai=0,Bi=0,Ci=0,Di=0 -----> it doesn't lead to LORENTZ transform as l12=l13=l14=0*/
+gR:ratsimp(expand(substitute(0,Ai,substitute(0,Bi,substitute(0,Ci,substitute(0,Di,eq_k2))))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*solution g is pure imaginary but real quaternion Ar=0,Ai=0,Bi=0,Ci=0,Di=0 -----> it doesn't lead to LORENTZ transform as l12=l13=l14=0*/
+gPIR:ratsimp(expand(substitute(0,Ar,substitute(0,Ai,substitute(0,Bi,substitute(0,Ci,substitute(0,Di,eq_k2)))))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*
+eq_z1:expand(substitute(Za*cos(Fia),Ar,substitute(Za*sin(Fia),Ai,eq_k2)));
+eq_z2:expand(substitute(Zb*cos(Fib),Br,substitute(Zb*sin(Fib),Bi,eq_z1)));
+eq_z3:expand(substitute(Zc*cos(Fic),Cr,substitute(Zc*sin(Fic),Ci,eq_z2)));
+eq_z4:expand(substitute(Zd*cos(Fid),Dr,substitute(Zd*sin(Fid),Di,eq_z3)));
+trigsimp(eq_z4)
+*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(expand((Ar+%i*Ai)*(Br-%i*Bi)));
+imagpart(expand((Ar+%i*Ai)*(Br-%i*Bi)));
+realpart(expand((Ar-%i*Ai)*(Br+%i*Bi)));
+imagpart(expand((Ar-%i*Ai)*(Br+%i*Bi)));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand((Ar+%i*Ai)*(Br-%i*Bi)*(Ar-%i*Ai)*(Br+%i*Bi));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+trigsimp(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(gfactor(substitute(0,Ai,substitute(0,Br,substitute(0,Cr,substitute(0,Dr,eq_k2))))));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
