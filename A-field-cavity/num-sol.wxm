@@ -1,0 +1,66 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+Az(r,z,a):=1/(2*%pi*sqrt(z^2+(a+r)^2))*((a^2-z^2-r^2)/(z^2+(r-a)^2)*elliptic_ec(2*(r*a)^(1/2)*(z^2+(a+r)^2)^((-1)/2))+elliptic_kc(2*(r*a)^(1/2)*(z^2+(a+r)^2)^((-1)/2)));
+load ("newton1")$
+Z0:0.1;
+V0:quad_qags(Az(0,z,1), z, 0, Z0);
+V:V0[1];
+/*F(r,Z):=quad_qags(Az(r,z,1), z, 0, Z)-V^2;*/
+/*F(r,Z):=integrate(Az(r,z,1), z, 0, Z)-V^2*/;
+V(r,Z):=quad_qags(Az(r,z,1), z, 0, Z)[1];
+numer:true;
+FN(r,Z):=quad_qags(Az(r,z,1), z, 0, Z)[1]-V;
+FD(r,Z):=Az(r,Z,1);
+ZC(r,Z):=FN(r,Z)/FD(r,Z);
+Z1_1:Z0-ZC(0.1,0.1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+V(0.1,0.09795);
+V(0.2,0.096);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff (V(0.1,Z), Z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+spec1 (r,V,min,max):= ([x,delta,last_err,err,s], x:min, last_err: abs(V(r,x)-V), delta:(max-min)/2, 
+
+           do (x:x+delta;
+              err: abs(V(r,x1)-V), 
+              if (err< 1e-9) then return(x),
+              if (err<last_err) then ( last_err:err)
+                                else ( x:x-delta ),
+              delta:delta/2
+              ))$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+newton (f, x):= ([y, df, dfx], df: diff (f ('x), 'x),
+
+
+          do (y: ev(df), x: x - f(x)/y, 
+
+
+              if abs (f (x)) < 5e-6 then return (x)))$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+newton_spec (r,x):= ([y, df, dfx], numer:true,df: A(r,x,1),
+
+
+          do (y: ev(df), x: x - FN(r,x)/y, 
+
+
+              if abs (f (x)) < 5e-6 then return (x)))$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+newton_spec(0.1,0.1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
