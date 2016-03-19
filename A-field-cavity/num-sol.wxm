@@ -93,7 +93,9 @@ UFO:nvect(V0,0.1,0,1,1000);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-plot2d ([[discrete, X,UFO],[parametric, cos(x), Z0*sin(x), [x,0,%pi/2]]])$
+/* plot2d ([[discrete, X,UFO],[parametric, cos(x), Z0*sin(x), [x,0,%pi/2]]])$ */
+
+plot2d ([discrete,UFO])$
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
