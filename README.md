@@ -32,7 +32,7 @@ green-book:
 
 ionospheric-transfer:
   
-     contains circuit design and some analysis for Tesla like solution for energy transfer via ionosphere  
+     contains circuit design and some circuit analysis for Tesla-like solution for energy transfer via ionosphere. high voltage is not required here, just tune everything to resonance.  
 
 FTL-problem:
 
@@ -45,7 +45,7 @@ FTL-problem:
      pauli12-H.wxm         - this file is crucial for whole derivation. On the begining Pauli-like matrices are introduced, and they are used for quaternion representation.
                              then 4 vectors are coverted also to quaternions. then formula for %i36 Tq:expand(gQC . Q .gCC); is used for conversion of matrix multiplication 
                              to quaternion left and right multiplication. Finaly quaternion left and right multiplication is compared to matrix of Lorentz transform, and all
-                             elements are symbolicaly evaluated. Then follows simplyfication.
+                             elements are symbolicaly evaluated. Then follows simplification.
 
 
 
