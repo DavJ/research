@@ -2,15 +2,10 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-BzN(r,z,a):=block([alpha,beta,gama,k,Q,value],
-                   alpha:r/a,beta:z/a,gama:z/r,
-                   Q:(1+alpha)^2+beta^2,
-                   k:(4*alpha/Q)^(1/2),
-                   value:float((gama/(Q^(1/2)))*(((1-alpha^2-beta^2)/(Q-4*alpha))*elliptic_ec(k)+elliptic_kc(k))),
-                   print("value",value),
-                   return(value)
-
-                  );
+Az(r,z,a):=1/(2*%pi*sqrt(z^2+(a+r)^2))*((a^2-z^2-r^2)/(z^2+(r-a)^2)*elliptic_ec(2*(r*a)^(1/2)*(z^2+(a+r)^2)^((-1)/2))+elliptic_kc(2*(r*a)^(1/2)*(z^2+(a+r)^2)^((-1)/2)));
+Z0:float(1);
+V0:float(quad_qags(Az(0,z,1), z, 0, Z0)[1]);
+V(r,Z):=quad_qags(Az(r,z,1), z, 0, Z)[1];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
@@ -31,6 +26,20 @@ newton(r,target,estimate):= block([i,x,delta],
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
+/*newton(0,V0,0.1);
+newton(0.1,V0,%);
+newton(0.2,V0,%);
+newton(0.3,V0,%);
+newton(0.4,V0,%);
+newton(0.5,V0,%);
+newton(0.6,V0,%);
+newton(0.7,V0,%);
+newton(0.8,V0,%);
+newton(0.9,V0,%);
+newton(0.9999999,V0,%);*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
 vect(min,max,steps):=block([M,i,st],
                       st:(max-min)/steps,
                       M:[],
@@ -43,14 +52,7 @@ vect(min,max,steps):=block([M,i,st],
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-tvect(min,max,steps):=block([M,i,st],
-                      st:(max-min)/steps,
-                      M:[],
-                      for i:min step st thru (max-st) do ( 
-                                                     M:append(M,[float(0.5*(2*i-1)^(1/3)+0.5)])
-                                                         ),
-                      return(M)
-                     );
+X:vect(0,1,100);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
@@ -61,71 +63,37 @@ nvect(target,estimate,min,max,steps):=block([M,r,stp,value],
                       value:estimate,
                       for i:min step stp thru (max-stp) do (
                                                      print("i",i),
+                                                     
                                                      value:float(newton(i,target,value)), 
                                                      M:append(M,[value]),
                                                      print("i",i,"step",stp,"max",max,"M",M)
-                                                  
                                                     ),
                       return(M)
                      );
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-X:vect(0,1,100);
-XT:tvect(0,1,100);
-plot2d ([discrete, X,XT]);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-tnvect(target,estimate,min,max,steps):=block([M,r,stp,value],
+nelips(target,estimate,min,max,steps):=block([M,r,stp,value],
                       stp:float((max-min)/steps),
                       M:[],
                       print("st",stp,"min",min,"max",max),
                       value:estimate,
                       for i:min step stp thru (max-stp) do (
                                                      print("i",i),
-                                                     r:float(0.5*(2*i-1)^(1/3)+0.5),
-                                                     value:float(newton(r,target,value)), 
-                                                     M:append(M,[value]),
-                                                     print("i",i,"step",stp,"max",max,"r",r,"M",M)
-                                                  
+                                                     
+                                                     value:float(newton(i,target,value)), 
+                                                     M:append(M,[value])
                                                     ),
                       return(M)
                      );
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-/*TUFO:tnvect(V0,Z0,0,1,100);*/;
+UFO:nvect(V0,0.1,0,1,1000);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-/*plot2d ([[discrete, XT,TUFO],[parametric, cos(x), Z0*sin(x), [x,0,%pi/2]]])$*/;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-plot2d ([[parametric,x,Bz(x,0.5,1),[x,0,1],[nticks,2000]],[parametric,x,AzN(x,0.5,1),[x,0,1],[nticks,2000]]])$
-
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-plot2d ([parametric,x,Bz(x,0.5,1),[x,0,1],[nticks,2000]])$
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-plot2d ([[parametric,x,Bz(0,x,1),[x,0,2],[nticks,300]],[parametric,x,Bz(0.25,x,1),[x,0,2],[nticks,300]],[parametric,x,Bz(0.5,x,1),[x,0,2],[nticks,300]]])$
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-float(elliptic_kc(0));
-float(elliptic_ec(0));
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-plot2d([[parametric,x,elliptic_kc(x),[x,-1,0],[nticks,1000]],[parametric,x,elliptic_ec(x),[x,-1,0],[nticks,1000]]])$
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-plot2d([[parametric,x,elliptic_kc(x),[x,0,1],[y,0,3],[nticks,1000]],[parametric,x,elliptic_ec(x),[x,0,1],[y,0,3],[nticks,1000]]])$
+plot2d ([[discrete, X,UFO],[parametric, cos(x), Z0*sin(x), [x,0,%pi/2]]])$
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
