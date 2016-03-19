@@ -1,0 +1,179 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 14.09.0 ] */
+
+/* [wxMaxima: input   start ] */
+/*PRENOS SIGNALU SKRZ IONOSFERU - UVAZUJI JAKO OBVOD SE SOUSTREDENYMI PARAMETRY / TRANSMISSION OF SIGNAL VIA IONOSPHERE - CONSIDERING AS CIRCUIT WITH LUMPED PARAMETERS
+
+
+1) nahradni schema obvodu / equivalent circuit
+
+napetove buzeni/voltage source:
+
+  -----Zi----(1)------- Z1 ------(I)----------- Z2 ------------(2)------
+  |             |                 |                          |         |
+  |             |                 |                          |         |
+  |             |                 |                          |         |
+  U            Z01                Z3                        Z02        Z0
+  |             |                 |                          |         |
+  |             |                 |                          |         |
+  |             |                 |                          |         |
+  |             |                 |                          |         |
+  -----------(0)-----------------------------------------------(0)-----
+
+proudove buzeni/current source:
+
+  ----- ----(1)-------------------Y12--------------------------(2)--------
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ I     Yi          Y01   Y10                       Y20  Y02              Y0
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ -----------(0)------------------------------------------------(0)-------  
+
+
+ 
+
+
+
+2) nahradni schema po pouziti transformace hvezda-trojuhelnik (obvod se zkomplikoval - nevhodne)/ equivalent circuit after transformation delta - triangle (more complicated circutic - not suitable) 
+
+napetove buzeni/voltage source:
+
+ -----Zi----(1)-------------------Z12--------------------------(2)-------
+ |                |     |                         |     |               |
+ |                |     |                         |     |               |
+ U               Z01    Z10                       Z20  Z02              Z0
+ |                |     |                         |     |               |
+ |                |     |                         |     |               |
+ |                |     |                         |     |               |
+ -----------(0)------------------------------------------------(0)-------
+
+ proudove buzeni/current source:
+
+ ----------(1)-------------------Y12--------------------------(2)---------
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ I     Yi          Y01   Y10                       Y20  Y02              Y0
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ |     |           |     |                         |     |               |
+ -----------(0)------------------------------------------------(0)-------  
+
+  
+ pozn: predpokladam /note: suppose
+
+    Zi=%i*omega*Li=1/Yi
+
+
+3) transformace pomoci Theveninova teoremu / transformation using Thevenin theorem
+ 
+  
+ --------Zi1-----(2)-------
+ |                        |
+ |                        |
+ U1                       Zo
+ |                        |
+ |                        |
+ ----------------(0)-------
+
+*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Z1(omega,Ci1):=1/(%i*omega*Ci1);
+Z2(omega,Ci2):=1/(%i*omega*Ci2);
+Z3(omega,Ri0,Ci0):=1/(1/Ri0+%i*omega*Ci0);
+Z01(omega,C01):=1/(%i*omega*C01);
+Z02(omega,C01):=1/(%i*omega*C02);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Z10(omega,Ci1,Ci2,Ri0,Ci0):=Z1(omega,Ci1)+Z3(omega,Ri0,Ci0)+Z1(omega,Ci1)*Z3(omega,Ri0,Ci0)/Z2(omega,Ci2);
+Z12(omega,Ci1,Ci2,Ri0,Ci0):=Z1(omega,Ci1)+Z2(omega,Ci2)+Z1(omega,Ci1)*Z2(omega,Ci2)/Z3(omega,Ri0,Ci0);
+Z20(omega,Ci1,Ci2,Ri0,Ci0):=Z2(omega,Ci2)+Z3(omega,Ri0,Ci0)+Z2(omega,Ci2)*Z3(omega,Ri0,Ci0)/Z1(omega,Ci1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Y01(omega,Ci1,Ci2,Ri0,Ci0):=%i*omega*C01;
+Y02(omega,Ci1,Ci2,Ri0,Ci0):=%i*omega*C02;
+Y10(omega,Ci1,Ci2,Ri0,Ci0):=1/Z10(omega,Ci1,Ci2,Ri0,Ci0);
+Y12(omega,Ci1,Ci2,Ri0,Ci0):=1/Z12(omega,Ci1,Ci2,Ri0,Ci0);
+Y20(omega,Ci1,Ci2,Ri0,Ci0):=1/Z20(omega,Ci1,Ci2,Ri0,Ci0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Yi(omega,Li):=1/(%i*omega*Li);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(Z12(omega,Ci1,Ci2,Ri0,Ci0)=1,omega);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(Z10(omega,Ci1,Ci2,Ri0,Ci0)=1,omega);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(Z20(omega,Ci1,Ci2,Ri0,Ci0)=1,omega);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve((1/(%i*omega*Ci1)+1/(%i*omega*Ci2)-(((1/Ri0)+%i*omega*Ci0))/(omega^2*Ci1*Ci2))=0,omega);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(Z20(-1/((%i*Ci2+%i*Ci1+%i*Ci0)*Ri0),Ci1,Ci2,Ri0,Ci0));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(Z12(omega,Ci1,Ci2,Ri0,Ci0),omega,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(Z10(omega,Ci1,Ci2,Ri0,Ci0),omega,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(Z20(omega,Ci1,Ci2,Ri0,Ci0),omega,inf);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+U1(omega,Ci1,Ci2,Ri0,Ci0):=Z3(omega,Ci1,Ci2,Ri0,Ci0)/(Zi+Z1(omega,Ci1)+Z3(omega,Ci1,Ci2,Ri0,Ci0));
+/*Zi1(omega,Ci1,Ci2,Ri0,Ci0):=;*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/* ************** suppose Yi=0,input in "resonance" **************************************************************************************************** */
+om:solve(Y01(omega,Ci1,Ci2,Ri0,Ci0)+Y10(omega,Ci1,Ci2,Ri0,Ci0)=0,omega);
+
+realpart(om);
+imagpart(om);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/* ************* suppose Yi<>0,input in "resonance" **************************************************************************************************** */
+eq:gfactor(ratsimp((Y01(omega,Ci1,Ci2,Ri0,Ci0)+Y10(omega,Ci1,Ci2,Ri0,Ci0)+Yi(omega,Li)=0)));
+solve(gfactor(Y01(omega,Ci1,Ci2,Ri0,Ci0)+Y10(omega,Ci1,Ci2,Ri0,Ci0)+Yi(omega,Li))=0,omega);
+om:%;
+
+realpart(om);
+imagpart(om);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Z12((C01+Ci1)/((Ci2+Ci1+Ci0)*Ri0*C01+Ci0*Ci1*Ri0),Ci1,Ci2,Ri0,Ci0);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Z12(omega,Ci1,Ci2,Ri0,Ci0);
+realpart(Z12(omega,Ci1,Ci2,Ri0,Ci0));
+imagpart(Z12(omega,Ci1,Ci2,Ri0,Ci0));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(Ci2*Li*omega^3*Ri0*C01+Ci1*Li*omega^3*Ri0*C01+Ci0*Li*omega^3*Ri0*C01-%i*Li*omega^2*C01+Ci0*Ci1*Li*omega^3*Ri0-Ci2*omega*Ri0-Ci1*omega*Ri0-Ci0*omega*Ri0-%i*Ci1*Li*omega^2+%i)=0,omega);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
