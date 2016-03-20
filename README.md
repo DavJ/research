@@ -42,7 +42,7 @@ FTL-problem:
 
      lorentz_transform.wxm - this is just nice introduction to Lorentz transform, nothing special. there are nice charts.
 
-     pauli12-H.wxm         - this file is crucial for whole derivation. On the begining Pauli-like matrices are introduced, and they are used for quaternion representation.
+     pauli12.wxm         - this file is crucial for whole derivation. On the begining Pauli-like matrices are introduced, and they are used for quaternion representation.
                              then 4 vectors are coverted also to quaternions. then formula for %i36 Tq:expand(gQC . Q .gCC); is used for conversion of matrix multiplication 
                              to quaternion left and right multiplication. Finaly quaternion left and right multiplication is compared to matrix of Lorentz transform, and all
                              elements are symbolicaly evaluated. Then follows simplification.
