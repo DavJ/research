@@ -1,0 +1,23 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+/*SUMMARY*/
+/*from pauli12 where was strictly developed -> refer there to special solutions (groups)*/
+/*in new_dev3 was simplified to 5 equtations only*/
+/*r:matrix([0=Ai^2-Br^2],[1=Ar^2-Bi^2],[(bx*sqrt(1-bx^2))/(2*bx^2-2)=Ai*Br-Ar*Bi],[0=Ar*Br+Ai*Bi],[0=Bi*Br+Ai*Ar]);*/
+/*in final_equotation_gtl1, 5base4 and sqr_quat there was done attempt to solve this equtations;*/;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*raw solution from pauli12*/
+matrix([[-(sqrt(-bz^2-by^2-bx^2+1)-bz^2-by^2-bx^2+1)/(2*bz^2+2*by^2+2*bx^2-2)=Ar^2+Ai^2]],[[-(bx^2*sqrt(-bz^2-by^2-bx^2+1)+bx^2*bz^2+bx^2*by^2+bx^4-bx^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Br^2+Bi^2]],[[-(by^2*sqrt(-bz^2-by^2-bx^2+1)+by^2*bz^2+by^4+(bx^2-1)*by^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Cr^2+Ci^2]],[[-(bz^2*sqrt(-bz^2-by^2-bx^2+1)+bz^4+(by^2+bx^2-1)*bz^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Dr^2+Di^2]],[[-bx/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Br-Ar*Bi]],[[0=Cr*Di-Ci*Dr]],[[-by/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Cr-Ar*Ci]],[[0=Bi*Dr-Br*Di]],[[-bz/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Dr-Ar*Di]],[[0=Br*Ci-Bi*Cr]],[[-(bx*by*sqrt(-bz^2-by^2-bx^2+1)-bx*by)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Br*Cr+Bi*Ci]],[[0=Ar*Dr+Ai*Di]],[[-(bx*bz*sqrt(-bz^2-by^2-bx^2+1)-bx*bz)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Br*Dr+Bi*Di]],[[0=Ar*Cr+Ai*Ci]],[[-(by*bz*sqrt(-bz^2-by^2-bx^2+1)-by*bz)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Cr*Dr+Ci*Di]],[[0=Ar*Br+Ai*Bi]],[[(sqrt(-bz^2-by^2-bx^2+1)+1)/(2*sqrt(-bz^2-by^2-bx^2+1))=Dr^2+Cr^2+Br^2+Ar^2]],[[-(sqrt(-bz^2-by^2-bx^2+1)-1)/(2*sqrt(-bz^2-by^2-bx^2+1))=Di^2+Ci^2+Bi^2+Ai^2]],[[-(bx^2*sqrt(-bz^2-by^2-bx^2+1)-bx^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Dr^2-Cr^2+Bi^2+Ai^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+bx^2)+bx^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Di^2-Ci^2+Br^2+Ar^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+by^2+2*bx^2)+by^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Di^2+Cr^2-Bi^2+Ar^2]],[[-(by^2*sqrt(-bz^2-by^2-bx^2+1)-by^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Dr^2+Ci^2-Br^2+Ai^2]],[[-(bz^2*sqrt(-bz^2-by^2-bx^2+1)-bz^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Di^2-Cr^2-Br^2+Ai^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(bz^2+2*by^2+2*bx^2)+bz^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Dr^2-Ci^2-Bi^2+Ar^2]],[[1=Dr^2+2*%i*Di*Dr-Di^2+Cr^2+2*%i*Ci*Cr-Ci^2+Br^2+2*%i*Bi*Br-Bi^2+Ar^2+2*%i*Ai*Ar-Ai^2]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*simplified full solution from new_dev.wxm*/
+r:matrix([0=Ai^2-Br^2],[1=Ar^2-Bi^2],[(bx*sqrt(1-bx^2))/(2*bx^2-2)=Ai*Br-Ar*Bi],[0=Ar*Br+Ai*Bi],[0=Bi*Br+Ai*Ar]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

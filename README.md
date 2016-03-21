@@ -47,7 +47,10 @@ FTL-problem:
                              to quaternion left and right multiplication. Finaly quaternion left and right multiplication is compared to matrix of Lorentz transform, and all
                              elements are symbolicaly evaluated. Then follows simplification.
 
+     new_dev.wxm          -  in this file I substituted in 25 equations from pauli12.wxm for lij coeficients from FTL lorentz transform, and then simplified equations to 5 only
+                            (k2_7 - still contains expanded form)
 
+     conversion_table_lorentz_to_biquats.wxm - this file contains brief summary of results from pauli12.wxm and new_dev.wxm, use as reference for further derivation 
 
 
 
