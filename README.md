@@ -56,7 +56,9 @@ FTL-problem:
  
      directory scanned-calculations is link to directory of same name in green-book and contains final solutions 
 
+theory-of-everything:
 
+    directory contains files related to theory of everything, i.e. fundamental theory combining together electromagnetic an gravity theory 
 
 
 
