@@ -219,7 +219,9 @@ solve(k2_7,matrix([Ar,Ai,Br,Bi]));
 /* [wxMaxima: input   start ] */
 expand(k2_7[3]^2);
 subst(Ai^2,Br^2,%);
-ratsimp(subst(Ar^2-1,Bi^2,%));
+eq_123:ratsimp(subst(Ar^2-1,Bi^2,%));
+subst(2*(Ai*Ar)^2,-2*Ai*Ar*Bi*Br,eq_123);
+subst(AI2^2,Ai^4,subst(AR2^2,Ar^4,subst(AR2,Ar^2,subst(AI2,Ai^2,%)));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
