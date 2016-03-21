@@ -5,14 +5,14 @@ files related to my research
 
 A-field-cavity:
 
-   this directory contains different versions of file num-sol.wxm. This is wxMaxima file which contains calculation of shape of A-field-cavity excited by torroidal coil. The cavity
-   boundary should be manufactured from conductive material.
+     this directory contains different versions of file num-sol.wxm. This is wxMaxima file which contains calculation of shape of A-field-cavity excited by torroidal coil. The cavity
+     boundary should be manufactured from conductive material.
  
 green-book:
 
-   contains scans of my green book read my blog for more info about green book.   
+     contains scans of my green book read my blog for more info about green book.   
 
-   subdirectories:
+     subdirectories:
 
      metric-tensor          - contains calculations of several metric tensors (for Einstein theory but also for Kaluza-Klein theory) 
 
@@ -48,10 +48,12 @@ FTL-problem:
                              elements are symbolicaly evaluated. Then follows simplification.
 
      new_dev.wxm          -  in this file I substituted in 25 equations from pauli12.wxm for lij coeficients from FTL lorentz transform, and then simplified equations to 5 only
-                            (k2_7 - still contains expanded form)
+                             for case that by=0,bz=0 (i.e. reference frame is moving in x direction only)
+                             k2_7 - contains the solution
 
      conversion_table_lorentz_to_biquats.wxm - this file contains brief summary of results from pauli12.wxm and new_dev.wxm, use as reference for further derivation 
-
+                                               r matrix contains the solution
+ 
      directory scanned-calculations is link to directory of same name in green-book and contains final solutions 
 
 
