@@ -52,7 +52,7 @@ FTL-problem:
 
      conversion_table_lorentz_to_biquats.wxm - this file contains brief summary of results from pauli12.wxm and new_dev.wxm, use as reference for further derivation 
 
-
+     directory scanned-calculations is link to directory of same name in green-book and contains final solutions 
 
 
 
