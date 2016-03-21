@@ -9,7 +9,13 @@ K:matrix([0,%i],[%i,0]);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
+define(quat_a(Q),ratsimp(expand(1/2*(Q[1,1]+Q[2,2]))));
+define(quat_b(Q),ratsimp(expand(-%i/2*(Q[1,1]-Q[2,2]))));
+define(quat_c(Q),ratsimp(expand(1/2*(Q[1,2]-Q[2,1]))));
+define(quat_d(Q),ratsimp(expand(-%i/2*(Q[1,2]+Q[2,1]))));
+/* [wxMaxima: input   end   ] */
 
+/* [wxMaxima: input   start ] */
 k2:gfactor(matrix([[-(sqrt(-bz^2-by^2-bx^2+1)-bz^2-by^2-bx^2+1)/(2*bz^2+2*by^2+2*bx^2-2)=Ar^2+Ai^2]],[[-(bx^2*sqrt(-bz^2-by^2-bx^2+1)+bx^2*bz^2+bx^2*by^2+bx^4-bx^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Br^2+Bi^2]],[[-(by^2*sqrt(-bz^2-by^2-bx^2+1)+by^2*bz^2+by^4+(bx^2-1)*by^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Cr^2+Ci^2]],[[-(bz^2*sqrt(-bz^2-by^2-bx^2+1)+bz^4+(by^2+bx^2-1)*bz^2)/(2*bz^4+(4*by^2+4*bx^2-2)*bz^2+2*by^4+(4*bx^2-2)*by^2+2*bx^4-2*bx^2)=Dr^2+Di^2]],[[-bx/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Br-Ar*Bi]],[[0=Cr*Di-Ci*Dr]],[[-by/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Cr-Ar*Ci]],[[0=Bi*Dr-Br*Di]],[[-bz/(2*sqrt(-bz^2-by^2-bx^2+1))=Ai*Dr-Ar*Di]],[[0=Br*Ci-Bi*Cr]],[[-(bx*by*sqrt(-bz^2-by^2-bx^2+1)-bx*by)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Br*Cr+Bi*Ci]],[[0=Ar*Dr+Ai*Di]],[[-(bx*bz*sqrt(-bz^2-by^2-bx^2+1)-bx*bz)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Br*Dr+Bi*Di]],[[0=Ar*Cr+Ai*Ci]],[[-(by*bz*sqrt(-bz^2-by^2-bx^2+1)-by*bz)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Cr*Dr+Ci*Di]],[[0=Ar*Br+Ai*Bi]],[[(sqrt(-bz^2-by^2-bx^2+1)+1)/(2*sqrt(-bz^2-by^2-bx^2+1))=Dr^2+Cr^2+Br^2+Ar^2]],[[-(sqrt(-bz^2-by^2-bx^2+1)-1)/(2*sqrt(-bz^2-by^2-bx^2+1))=Di^2+Ci^2+Bi^2+Ai^2]],[[-(bx^2*sqrt(-bz^2-by^2-bx^2+1)-bx^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Dr^2-Cr^2+Bi^2+Ai^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+bx^2)+bx^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Di^2-Ci^2+Br^2+Ar^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+by^2+2*bx^2)+by^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Di^2+Cr^2-Bi^2+Ar^2]],[[-(by^2*sqrt(-bz^2-by^2-bx^2+1)-by^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=-Dr^2+Ci^2-Br^2+Ai^2]],[[-(bz^2*sqrt(-bz^2-by^2-bx^2+1)-bz^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Di^2-Cr^2-Br^2+Ai^2]],[[(sqrt(-bz^2-by^2-bx^2+1)*(bz^2+2*by^2+2*bx^2)+bz^2)/(sqrt(-bz^2-by^2-bx^2+1)*(2*bz^2+2*by^2+2*bx^2))=Dr^2-Ci^2-Bi^2+Ar^2]],[[1=Dr^2+2*%i*Di*Dr-Di^2+Cr^2+2*%i*Ci*Cr-Ci^2+Br^2+2*%i*Bi*Br-Bi^2+Ar^2+2*%i*Ai*Ar-Ai^2]]));
 /* [wxMaxima: input   end   ] */
 
@@ -85,32 +91,122 @@ lhs(k2[1]);
 /* z toho plyne ze nejde pro beta>1 vzit reseni +/-%i nebot soucin dvou komplexne zdruzenych  cisel musi byt realny
  pokud nejake reseni existuje je z mnoziny bi-quaternionu
 */
-Ar:Ar_a*A+Ar_b*I+Ar_c*J+Ar_d*K;
+/*Ar:Ar_a*A+Ar_b*I+Ar_c*J+Ar_d*K;
 Ai:Ai_a*A+Ai_b*I+Ai_c*J+Ai_d*K;
 RES:ratsimp((Ar-%i*Ai)*(Ar+%i*Ai));
 ratsimp(1/2*(RES[1,1]+RES[2,2]));
 ratsimp(-%i/2*(RES[1,1]-RES[2,2]));
-ratsimp(1/2*(RES[2,1]-RES[1,2]));
-ratsimp(-%i/2*(RES[2,1]+RES[1,2]));
+ratsimp(1/2*(RES[2,1]-RES[1,2]));
+
+
+ratsimp(-%i/2*(RES[2,1]+RES[1,2]));*/;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-
 -(sqrt(-bz^2-by^2-bx^2+1)-bz^2-by^2-bx^2+1)/(2*(bz^2+by^2+bx^2-1))=(Ar-%i*Ai)*(Ar+%i*Ai);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 MULT3:Q1 . Q1_QC_CC;
-ratsimp(1/2*(MULT3[1,1]+MULT3[2,2]));
+ratsimp(quat_a(MULT3));
 ratsimp(k2[17]+k2[18]);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-ratsimp(-%i/2*(MULT3[1,1]-MULT3[2,2]));
+ratsimp(quat_b(MULT3));
 ratsimp(2*%i*k2[5]-2*%i*k2[6]);
 -%;
 /* [wxMaxima: input   end   ] */
 
+/* [wxMaxima: input   start ] */
+ratsimp(quat_c(MULT3));
+ratsimp(2*%i*k2[8]-2*%i*k2[7]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(quat_d(MULT3));
+ratsimp(-2*%i*k2[9]+2*%i*k2[10]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*it was done by 1,2,3,4,6,8,10,12,14,16*/
+/*remains 11,13,15,17,18,19,20,21,22,23,24*/
+
+
+k2[11];
+k2[13];
+k2[15];
+k2[19];
+k2[20];
+k2[21];
+k2[22];
+k2[23];
+k2[24];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_1:ratsimp(subst(0,by,subst(0,bz,k2)));
+k2_2:ratsimp(subst(0,bx,subst(0,bz,k2)));
+k2_3:ratsimp(subst(0,bx,subst(0,by,k2)));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_4:subst(0,Cr,subst(0,Ci,subst(0,Dr,subst(0,Di,k2_1))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+limit(limit(k2_4, bx, 0));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+/*only bx*/
+k2_5:matrix([[-(sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)=Ar^2+Ai^2]],[[-(sqrt(1-bx^2)+bx^2-1)/(2*bx^2-2)=Br^2+Bi^2]],[[(bx*sqrt(1-bx^2))/(2*bx^2-2)=Ai*Br-Ar*Bi]],[[0=Ar*Br+Ai*Bi]],[[-(sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)=Br^2+Ar^2]],[[-(sqrt(1-bx^2)+bx^2-1)/(2*bx^2-2)=Bi^2+Ai^2]],[[1=Ar^2-Bi^2]],[[0=Ai^2-Br^2]],[[1=Br^2+2*%i*Bi*Br-Bi^2+Ar^2+2*%i*Ai*Ar-Ai^2]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Q1_1:subst(0,Cr,subst(0,Ci,subst(0,Dr,subst(0,Di,Q1))));
+Q1_CC_1:subst(0,Cr,subst(0,Ci,subst(0,Dr,subst(0,Di,Q1_CC))));
+Q1_QC_1:subst(0,Cr,subst(0,Ci,subst(0,Dr,subst(0,Di,Q1_QC))));
+Q1_QC_CC_1:subst(0,Cr,subst(0,Ci,subst(0,Dr,subst(0,Di,Q1_QC_CC))));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(quat_a(Q1_1 . Q1_CC_1));
+ratsimp(quat_b(Q1_1 . Q1_CC_1));
+ratsimp(quat_c(Q1_1 . Q1_CC_1));
+ratsimp(quat_d(Q1_1 . Q1_CC_1));
+ratsimp(quat_a(Q1_1 . Q1_QC_1));
+ratsimp(quat_b(Q1_1 . Q1_QC_1));
+ratsimp(quat_c(Q1_1 . Q1_QC_1));
+ratsimp(quat_d(Q1_1 . Q1_QC_1));
+ratsimp(quat_a(Q1_1 . Q1_QC_CC_1));
+ratsimp(quat_b(Q1_1 . Q1_QC_CC_1));
+ratsimp(quat_c(Q1_1 . Q1_QC_CC_1));
+ratsimp(quat_d(Q1_1 . Q1_QC_CC_1));
+ratsimp(determinant(Q1_1));
+ratsimp(determinant(Q1_CC_1));
+ratsimp(determinant(Q1_QC_CC_1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_5_gtl:matrix([[1/2*(1-1/(sqrt(1-bx^2)))=Ar^2+Ai^2]],
+
+[[1/2*((-sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)-1/(sqrt(1-bx^2)))=Br^2+Bi^2]],
+[[(bx/(2*sqrt(1-bx^2)))=Ai*Br-Ar*Bi]],
+[[0=Ar*Br+Ai*Bi]],
+[[1/2*(1-1/(sqrt(1-bx^2)))=Ar^2+Ai^2=Br^2+Ar^2]],
+[[1/2*((-sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)-1/(sqrt(1-bx^2)))=Bi^2+Ai^2]],
+[[1=Ar^2-Bi^2]],[[0=Ai^2-Br^2]],
+[[1=Br^2+2*%i*Bi*Br-Bi^2+Ar^2+2*%i*Ai*Ar-Ai^2]]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_5;
+/* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$
