@@ -193,19 +193,66 @@ ratsimp(determinant(Q1_QC_CC_1));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-k2_5_gtl:matrix([[1/2*(1-1/(sqrt(1-bx^2)))=Ar^2+Ai^2]],
-
-[[1/2*((-sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)-1/(sqrt(1-bx^2)))=Br^2+Bi^2]],
-[[(bx/(2*sqrt(1-bx^2)))=Ai*Br-Ar*Bi]],
-[[0=Ar*Br+Ai*Bi]],
-[[1/2*(1-1/(sqrt(1-bx^2)))=Ar^2+Ai^2=Br^2+Ar^2]],
-[[1/2*((-sqrt(1-bx^2)-bx^2+1)/(2*bx^2-2)-1/(sqrt(1-bx^2)))=Bi^2+Ai^2]],
-[[1=Ar^2-Bi^2]],[[0=Ai^2-Br^2]],
-[[1=Br^2+2*%i*Bi*Br-Bi^2+Ar^2+2*%i*Ai*Ar-Ai^2]]);
+k2_5;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-k2_5;
+k2_6:transpose(matrix([
+k2_5[1]-k2_5[5],
+ratsimp(k2_5[1]-k2_5[6]),
+/*-ratsimp(k2_5[2]-k2_5[5]);*/
+k2_5[3],
+k2_5[4],
+/*realpart(k2_5[9]);*/
+ratsimp(imagpart(k2_5[9])/2)
+]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+k2_7:matrix(k2_6[1][1][1],k2_6[2][1][1],k2_6[3][1][1],k2_6[4][1][1],k2_6[5][1][1]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(k2_7,matrix([Ar,Ai,Br,Bi]));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+expand(k2_7[3]^2);
+subst(Ai^2,Br^2,%);
+ratsimp(subst(Ar^2-1,Bi^2,%));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(expand(k2_5[3]^2));
+ratsimp(k2_6[3][^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ratsimp(-bx^2/(4*bx^2-4)=Ai^4+2*(Ai*Ar)^2+Ar^2*(Ar^2-1));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rvn:-bx^2/(4*bx^2-4)=(Ar^2+Ai^2)^2-Ar^2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_rvn:ratsimp(substitute(0,Ai,rvn));
+ratsimp(solve(eq_rvn,Ar));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq_rvn_2:ratsimp(substitute(0,Ar,rvn));
+ratsimp(solve(eq_rvn,Ai));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rvn_gen:ratsimp(solve(rvn,Ar));
+rvn_gen_i:ratsimp(solve(rvn,Ai));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Ar1:ratsimp(rhs(rvn_gen[1]));
+Bi1:ratsimp(sqrt(1-Ar1^2));
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
