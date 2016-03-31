@@ -70,7 +70,9 @@ theory-of-everything:
 
     directory contains files related to theory of everything, i.e. fundamental theory combining together electromagnetic and gravity theory. I consider the formulas in this directory to be correct. 
 
-
+hyperspace-waves-simple:
+   
+    contains simple derivation of hyperspace waves
 
 
 
