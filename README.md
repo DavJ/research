@@ -1,7 +1,7 @@
 # research
 files related to my research
 #author David Jaros
-#URL https://www.octonion-multiverse.com/ 
+#URL http://www.octonion-multiverse.com/ 
 
 A-field-cavity:
 
