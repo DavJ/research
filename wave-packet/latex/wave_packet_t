@@ -1,0 +1,1 @@
+{\color{Blue} }\psi (x, t) = \frac{1}{\sqrt{\sqrt{\pi}\sigma}}exp(\frac{-(x \pm ct)^2}{2\sigma^2})exp(\frac{\pm \imath \omega (x \pm ct)}{c}) 
