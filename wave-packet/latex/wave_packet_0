@@ -1,0 +1,1 @@
+\psi (x, t=0) = \frac{1}{\sqrt{\sqrt{\pi}\sigma}}exp(\frac{-x^2}{2\sigma^2})exp(\frac{\imath p_0 x}{\hbar}) 
