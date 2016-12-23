@@ -1,0 +1,13 @@
+\frac {1}{{\sqrt{1-\frac{v^2}{c^2}}}}(t'+\frac{vx'}{c^2}) = (\vec k \:' \vec x \:' -\omega\:' t\:')
+\\\\
+
+k_x' = \frac {k_x-\frac{v}{c}|\vec k|}{{\sqrt{1-\frac{v^2}{c^2}}}}
+
+\\\\
+k_y'=k_y
+\\\\
+k_z'=k_z
+\\\\
+\omega=\frac {\omega -\frac{v}{c}k_xc}{{\sqrt{1-\frac{v^2}{c^2}}}}
+\\\\
+
