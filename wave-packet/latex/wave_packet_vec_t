@@ -1,0 +1,1 @@
+\psi (x, t) = \frac{1}{\sqrt{\sqrt{\pi}\sigma}}exp(\frac{-(\vec k \vec x -\omega t)^2}{2\sigma^2|\vec k|^2})exp(\imath (\vec k \vec x -\omega t))

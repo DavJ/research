@@ -1,0 +1,6 @@
+\\\\
+\vec k \:'= \imath \frac {s_1k_x- s_2\frac{v}{c^2}\omega}{\sqrt{\frac{v^2}{c^2}-1}} \vec x_0\:' + k_y\vec y_0\:'+ k_z\vec z_0\:'
+\\\\
+
+\omega \:' = \imath \frac {s_2 \omega-s_1v k_x}{\sqrt{\frac{v^2}{c^2}-1}}
+

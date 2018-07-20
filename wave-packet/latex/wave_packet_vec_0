@@ -1,1 +1,1 @@
-{\color{Blue} }\psi (x, t=0) = \frac{1}{\sqrt{\sqrt{\pi}\sigma}}exp(\frac{-\vec x \vec x}{2\sigma^2})exp(\frac{\imath \vec k \vec x}{c})
+{\color{Blue} }\psi (x, t=0) = \frac{1}{\sqrt{\sqrt{\pi}\sigma}}exp(\frac{-\vec x \vec x}{2\sigma^2})exp(\imath \vec k \vec x)

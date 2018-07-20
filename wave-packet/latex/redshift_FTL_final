@@ -1,0 +1,12 @@
+\\\\\\\\\
+ k_x \:'= \imath k_x \frac {s_1-s_2\frac{v}{c}\frac{|\vec k|}{k_x}}{\sqrt{\frac{v^2}{c^2}-1}} 
+\\\\
+ k_y \:' =  k_y
+\\\\
+ k_z \:' = k_z 
+\\\\
+
+\omega \:' = \imath \omega\frac {s_2-s_1 \frac{v}{c} \frac{k_x}{|\vec k|}}{\sqrt{\frac{v^2}{c^2}-1}}
+
+\\\\\\
+\vec k \:'= k_x\:' \vec x_0 \:'+k_y \:'\vec y_0 \:'+k_z \:'\vec z_0 \:'                                                                         

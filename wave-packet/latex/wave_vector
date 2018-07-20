@@ -1,3 +1,11 @@
-\vec k = \frac {\omega}{c} \vec k_0 = \:\: ;
- \:\:\vec x= x \vec x_0 \:\: ; 
- \:\: p_0=\hbar\frac{\omega}{c}
+\\\\
+\vec k = \frac {\omega}{c} \vec k_0
+
+\\\\
+
+\vec x= x \vec x_0 + y \vec y_0 + z \vec z_0   
+
+\\\\
+
+p_0=\hbar\frac{\omega}{c}
+
