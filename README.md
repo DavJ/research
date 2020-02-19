@@ -75,7 +75,9 @@ hyperspace-waves-simple:
     contains simple derivation of hyperspace waves
 
 
-
+thesis-1998
+    my master degree thesis from Czech Technical University 1998
+ 
 
 
 

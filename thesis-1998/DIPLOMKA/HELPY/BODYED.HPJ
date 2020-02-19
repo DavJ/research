@@ -1,0 +1,20 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+HCW=0
+COMPRESS=12 Hall Zeck
+LCID=0x405 0x0 0x0 ;èesky
+REPORT=Yes
+CONTENTS=0
+TITLE=BODYED pro WIN95/WINNT
+COPYRIGHT=© 1998 David Jaroš. Všechna práva vyhrazena.
+HLP=.\bodyed.hlp
+
+[FILES]
+.\bodyed.rtf
+
+[MAP]
+_obsah=0
+
+[WINDOWS]
+main="",,0,,(r16761024)
