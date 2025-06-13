@@ -31,6 +31,11 @@ These concepts were formulated and published independently, before the appearanc
 
  - The later consciousness theory deliberately avoided the full use of biquaternionic or matrix notation to remain accessible and focused on phenomenological aspects. In contrast, the present work is intended as a **foundational physical theory**, using algebraic structures such as **Pauli matrices**, **biquaternions**, and **scalar field gradients** to describe space, time, and interaction fields in a unified way.
 
+### Mathematical Equivalence Note:
+ - Although in this work the space-time and field structures are formulated using **biquaternions**, an equivalent formulation can be made using **Pauli matrices**. Both represent the same underlying algebraic structure – namely the complexified Clifford algebra over \(\mathbb{R}^3\). Pauli matrices form a basis for the Lie algebra \( \mathfrak{su}(2) \), which is isomorphic to the algebra of unit quaternions. Thus, all operations and transformations described here can be translated into matrix form if desired.
+
+ - This equivalence was intuitively recognized by the author several years ago (circa 2017–2018), but due to the complexity of notation and lack of time, a full matrix reformulation was never written down. Nevertheless, it remains a valid alternative expression of the same theory.
+
 
 ### Author:
 David Jaroš (DavJ)
