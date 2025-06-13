@@ -24,6 +24,14 @@ The central idea is the use of **biquaternionic algebra** as a fundamental mathe
 
 These concepts were formulated and published independently, before the appearance of several later works on algebraic and emergent models of space and fields.
 
+
+### Note on chronology:  
+
+ - This algebraic field theory was originally formulated around 2013–2015, long before the [Complex Consciousness Theory (2023–2025)](https://github.com/DavJ/complex-consciousness-theory). While both approaches share an interest in the deep structure of space-time and the emergence of parallel realities, they differ significantly in scope and mathematical framework.
+
+ - The later consciousness theory deliberately avoided the full use of biquaternionic or matrix notation to remain accessible and focused on phenomenological aspects. In contrast, the present work is intended as a **foundational physical theory**, using algebraic structures such as **Pauli matrices**, **biquaternions**, and **scalar field gradients** to describe space, time, and interaction fields in a unified way.
+
+
 ### Author:
 David Jaroš (DavJ)
 
