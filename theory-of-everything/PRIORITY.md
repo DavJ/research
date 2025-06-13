@@ -4,6 +4,16 @@ These materials (graphics, equations, concepts) were publicly published in this 
 
 This project was originally presented on the Google Sites website "Octonion Multiverse" (archived version dated Nov 2020, originally active from ~2013). The full structure and content have been preserved through a Google Takeout backup and include multiple articles covering the biquaternionic model of space-time, scalar field structures, and algebraic foundations of physical law.
 
+### Archive verification:
+
+The two-part Google Takeout archive of the original Octonion Multiverse website is included in this repository. The SHA256 checksums of the archive files are:
+
+- takeout-20250613T072957Z-001.zip: `b144c01eda80cc711167142d93b5bb9cacf751b59d5649fd0aee0721caa1acfc`
+- takeout-20250613T072957Z-1-001.zip: `3571209e3ad0349e26ad81c65ed5aaecf619d0c5e5fd99e65122c4ec2ff64e7e`
+
+These hashes ensure the integrity and provenance of the original materials from Google Takeout, generated on June 13, 2025.
+
+
 The central idea is the use of **biquaternionic algebra** as a fundamental mathematical framework for describing the structure of space-time, energy distributions, and field dynamics. This includes derivations of field gradients, scalar and vector potentials, and energy expressions formulated in terms of biquaternions.
 
 ### Key points of originality:
