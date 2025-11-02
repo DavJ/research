@@ -3,6 +3,28 @@ files related to my research
 #author David Jaros
 #URL http://www.octonion-multiverse.com/ 
 
+---
+
+## 🚀 Theoretical Applications (November 2025)
+
+**NEW:** Technical designs for applications based on UBT and hyperspace waves theory:
+
+- 🚀 **[FTL_PROPULSION_DESIGN.md](FTL_PROPULSION_DESIGN.md)** - Faster-Than-Light propulsion system design
+  - Based on hyperspace wave solutions (β > 1)
+  - Scalar field G generator and resonant cavity
+  - Complete engineering specifications and development roadmap
+  - ⚠️ Highly speculative - requires extensive experimental validation
+
+- 🔮 **[TELEPORTATION_DEVICE_DESIGN.md](TELEPORTATION_DEVICE_DESIGN.md)** - Quantum teleportation device design
+  - Based on A-field cavity resonance and scalar field G
+  - Dual-cavity system with phase synchronization
+  - Complete operational procedures and safety protocols
+  - ⚠️ Extremely speculative - no experimental validation exists
+
+**Status:** Theoretical designs only - not yet validated experimentally
+
+---
+
 A-field-cavity:
 
      this directory contains different versions of file num-sol.wxm. This is a wxMaxima file which contains calculation of shape of A-field-cavity excited by torroidal coil. the torroidal coil was 
@@ -97,23 +119,24 @@ This repository has been comprehensively analyzed for content relevant to Unifie
 - 🚀 **Novel extensions** - FTL Lorentz transforms and hyperspace waves
 - 🔗 **EM-Gravity unification** - Via scalar field G and E=mc²
 
+### Related Repositories
+
+**Quick Links:** 📚 **[REPOSITORY_LINKS.md](REPOSITORY_LINKS.md)** - Direct links to all related repositories
+
+**Main Repositories:**
+- 🔗 **[Unified Biquaternion Theory (UBT)](https://github.com/DavJ/unified-biquaternion-theory)** - Main theory repository
+- 🔗 **[Hyperspace Waves](https://github.com/DavJ/hyperspace_waves)** - Advanced wave solutions and applications
+
 ### UBT Integration (November 2025)
 
 **Integration Status:** ✅ Ready for Integration
-
-This repository is prepared for integration with:
-- **[Unified Biquaternion Theory Repository](https://github.com/DavJ/unified-biquaternion-theory)** - Main theory repository
-- **[Hyperspace Waves Repository](https://github.com/DavJ/hyperspace_waves)** - Advanced wave solutions
 
 **Integration Documentation:**
 - **[UBT_INTEGRATION_GUIDE.md](UBT_INTEGRATION_GUIDE.md)** - Comprehensive 14-week integration plan
 - **[UBT_INTEGRATION_MANIFEST.md](UBT_INTEGRATION_MANIFEST.md)** - Structured catalog of integration-ready content (30+ files)
 - **[HYPERSPACE_WAVES_INTEGRATION.md](HYPERSPACE_WAVES_INTEGRATION.md)** - Integration guide for hyperspace_waves repository
-
-**Quick Start for Integration:**
-1. Review [UBT_INTEGRATION_MANIFEST.md](UBT_INTEGRATION_MANIFEST.md) for complete file catalog
-2. See [UBT_INTEGRATION_GUIDE.md](UBT_INTEGRATION_GUIDE.md) for detailed roadmap
-3. Check [HYPERSPACE_WAVES_INTEGRATION.md](HYPERSPACE_WAVES_INTEGRATION.md) for hyperspace_waves coordination
+- **[UBT_INTEGRATION_QUICKSTART.md](UBT_INTEGRATION_QUICKSTART.md)** - Quick start guide
+- **[UBT_INTEGRATION_CHECKLIST.md](UBT_INTEGRATION_CHECKLIST.md)** - Progress tracking checklist
 
 **Integration-Ready Content:**
 - ✅ 5 core biquaternion LaTeX definitions
