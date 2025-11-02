@@ -1,0 +1,499 @@
+{
+  "total_files": 27,
+  "categories": {
+    "Wave Packet Analysis": [
+      {
+        "path": "wave-packet/latex/lorentz-transform-coordinates-FTL.tex",
+        "full_path": "/home/runner/work/research/research/wave-packet/latex/lorentz-transform-coordinates-FTL.tex",
+        "size_bytes": 154,
+        "line_count": 9,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Wave Packet Analysis"
+      },
+      {
+        "path": "wave-packet/latex/lorentz-transform-coordinates-STL.tex",
+        "full_path": "/home/runner/work/research/research/wave-packet/latex/lorentz-transform-coordinates-STL.tex",
+        "size_bytes": 160,
+        "line_count": 8,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Wave Packet Analysis"
+      }
+    ],
+    "Core Biquaternion Theory": [
+      {
+        "path": "theory-of-everything/latex/biquaternion-vector-potential.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-vector-potential.tex",
+        "size_bytes": 102,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/biquaternion-eight-intensity.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-eight-intensity.tex",
+        "size_bytes": 45,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/biquaternion-gradient.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-gradient.tex",
+        "size_bytes": 206,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/scalar-component.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/scalar-component.tex",
+        "size_bytes": 158,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/energy-complex-G.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-complex-G.tex",
+        "size_bytes": 750,
+        "line_count": 12,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/biquaternion-gradient-of-vector-potential.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-gradient-of-vector-potential.tex",
+        "size_bytes": 742,
+        "line_count": 16,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/biquaternion-eight-intensity-meaning.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-eight-intensity-meaning.tex",
+        "size_bytes": 453,
+        "line_count": 11,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/energy-simple-calculation.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-simple-calculation.tex",
+        "size_bytes": 413,
+        "line_count": 16,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      },
+      {
+        "path": "theory-of-everything/latex/energy-real-G.tex",
+        "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-real-G.tex",
+        "size_bytes": 695,
+        "line_count": 11,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Core Biquaternion Theory"
+      }
+    ],
+    "Hyperspace Waves": [
+      {
+        "path": "hyperspace-waves-simple/latex/limit_case_first.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/limit_case_first.tex",
+        "size_bytes": 57,
+        "line_count": 8,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/omega_and_k_FTL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/omega_and_k_FTL.tex",
+        "size_bytes": 190,
+        "line_count": 10,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/derivation-FTL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/derivation-FTL.tex",
+        "size_bytes": 369,
+        "line_count": 17,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/first_case.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/first_case.tex",
+        "size_bytes": 437,
+        "line_count": 14,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/final_hyperspace_waves.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/final_hyperspace_waves.tex",
+        "size_bytes": 558,
+        "line_count": 8,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/beta.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/beta.tex",
+        "size_bytes": 20,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/second_case.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/second_case.tex",
+        "size_bytes": 435,
+        "line_count": 12,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/four_waves.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/four_waves.tex",
+        "size_bytes": 814,
+        "line_count": 24,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/general-complex-wave.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/general-complex-wave.tex",
+        "size_bytes": 83,
+        "line_count": 5,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/complex-to-real-wave.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/complex-to-real-wave.tex",
+        "size_bytes": 95,
+        "line_count": 3,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/lorentz-transform-coordinates-FTL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/lorentz-transform-coordinates-FTL.tex",
+        "size_bytes": 124,
+        "line_count": 4,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/k_omega_c_comma.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/k_omega_c_comma.tex",
+        "size_bytes": 22,
+        "line_count": 1,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/lorentz-transform-coordinates-STL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/lorentz-transform-coordinates-STL.tex",
+        "size_bytes": 120,
+        "line_count": 4,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/limit_case_second.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/limit_case_second.tex",
+        "size_bytes": 88,
+        "line_count": 8,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/omega_and_k_STL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/omega_and_k_STL.tex",
+        "size_bytes": 229,
+        "line_count": 12,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      },
+      {
+        "path": "hyperspace-waves-simple/latex/derivation-STL.tex",
+        "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/derivation-STL.tex",
+        "size_bytes": 282,
+        "line_count": 9,
+        "equation_count": 0,
+        "equations": [],
+        "category": "Hyperspace Waves"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "wave-packet/latex/lorentz-transform-coordinates-FTL.tex",
+      "full_path": "/home/runner/work/research/research/wave-packet/latex/lorentz-transform-coordinates-FTL.tex",
+      "size_bytes": 154,
+      "line_count": 9,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Wave Packet Analysis"
+    },
+    {
+      "path": "wave-packet/latex/lorentz-transform-coordinates-STL.tex",
+      "full_path": "/home/runner/work/research/research/wave-packet/latex/lorentz-transform-coordinates-STL.tex",
+      "size_bytes": 160,
+      "line_count": 8,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Wave Packet Analysis"
+    },
+    {
+      "path": "theory-of-everything/latex/biquaternion-vector-potential.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-vector-potential.tex",
+      "size_bytes": 102,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/biquaternion-eight-intensity.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-eight-intensity.tex",
+      "size_bytes": 45,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/biquaternion-gradient.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-gradient.tex",
+      "size_bytes": 206,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/scalar-component.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/scalar-component.tex",
+      "size_bytes": 158,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/energy-complex-G.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-complex-G.tex",
+      "size_bytes": 750,
+      "line_count": 12,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/biquaternion-gradient-of-vector-potential.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-gradient-of-vector-potential.tex",
+      "size_bytes": 742,
+      "line_count": 16,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/biquaternion-eight-intensity-meaning.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/biquaternion-eight-intensity-meaning.tex",
+      "size_bytes": 453,
+      "line_count": 11,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/energy-simple-calculation.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-simple-calculation.tex",
+      "size_bytes": 413,
+      "line_count": 16,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "theory-of-everything/latex/energy-real-G.tex",
+      "full_path": "/home/runner/work/research/research/theory-of-everything/latex/energy-real-G.tex",
+      "size_bytes": 695,
+      "line_count": 11,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Core Biquaternion Theory"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/limit_case_first.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/limit_case_first.tex",
+      "size_bytes": 57,
+      "line_count": 8,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/omega_and_k_FTL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/omega_and_k_FTL.tex",
+      "size_bytes": 190,
+      "line_count": 10,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/derivation-FTL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/derivation-FTL.tex",
+      "size_bytes": 369,
+      "line_count": 17,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/first_case.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/first_case.tex",
+      "size_bytes": 437,
+      "line_count": 14,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/final_hyperspace_waves.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/final_hyperspace_waves.tex",
+      "size_bytes": 558,
+      "line_count": 8,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/beta.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/beta.tex",
+      "size_bytes": 20,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/second_case.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/second_case.tex",
+      "size_bytes": 435,
+      "line_count": 12,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/four_waves.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/four_waves.tex",
+      "size_bytes": 814,
+      "line_count": 24,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/general-complex-wave.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/general-complex-wave.tex",
+      "size_bytes": 83,
+      "line_count": 5,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/complex-to-real-wave.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/complex-to-real-wave.tex",
+      "size_bytes": 95,
+      "line_count": 3,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/lorentz-transform-coordinates-FTL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/lorentz-transform-coordinates-FTL.tex",
+      "size_bytes": 124,
+      "line_count": 4,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/k_omega_c_comma.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/k_omega_c_comma.tex",
+      "size_bytes": 22,
+      "line_count": 1,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/lorentz-transform-coordinates-STL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/lorentz-transform-coordinates-STL.tex",
+      "size_bytes": 120,
+      "line_count": 4,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/limit_case_second.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/limit_case_second.tex",
+      "size_bytes": 88,
+      "line_count": 8,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/omega_and_k_STL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/omega_and_k_STL.tex",
+      "size_bytes": 229,
+      "line_count": 12,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    },
+    {
+      "path": "hyperspace-waves-simple/latex/derivation-STL.tex",
+      "full_path": "/home/runner/work/research/research/hyperspace-waves-simple/latex/derivation-STL.tex",
+      "size_bytes": 282,
+      "line_count": 9,
+      "equation_count": 0,
+      "equations": [],
+      "category": "Hyperspace Waves"
+    }
+  ]
+}
