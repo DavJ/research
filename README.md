@@ -97,7 +97,31 @@ This repository has been comprehensively analyzed for content relevant to Unifie
 - 🚀 **Novel extensions** - FTL Lorentz transforms and hyperspace waves
 - 🔗 **EM-Gravity unification** - Via scalar field G and E=mc²
 
-For integration with https://github.com/DavJ/unified-biquaternion-theory
+### UBT Integration (November 2025)
+
+**Integration Status:** ✅ Ready for Integration
+
+This repository is prepared for integration with:
+- **[Unified Biquaternion Theory Repository](https://github.com/DavJ/unified-biquaternion-theory)** - Main theory repository
+- **[Hyperspace Waves Repository](https://github.com/DavJ/hyperspace_waves)** - Advanced wave solutions
+
+**Integration Documentation:**
+- **[UBT_INTEGRATION_GUIDE.md](UBT_INTEGRATION_GUIDE.md)** - Comprehensive 14-week integration plan
+- **[UBT_INTEGRATION_MANIFEST.md](UBT_INTEGRATION_MANIFEST.md)** - Structured catalog of integration-ready content (30+ files)
+- **[HYPERSPACE_WAVES_INTEGRATION.md](HYPERSPACE_WAVES_INTEGRATION.md)** - Integration guide for hyperspace_waves repository
+
+**Quick Start for Integration:**
+1. Review [UBT_INTEGRATION_MANIFEST.md](UBT_INTEGRATION_MANIFEST.md) for complete file catalog
+2. See [UBT_INTEGRATION_GUIDE.md](UBT_INTEGRATION_GUIDE.md) for detailed roadmap
+3. Check [HYPERSPACE_WAVES_INTEGRATION.md](HYPERSPACE_WAVES_INTEGRATION.md) for hyperspace_waves coordination
+
+**Integration-Ready Content:**
+- ✅ 5 core biquaternion LaTeX definitions
+- ✅ 3 energy density formulations
+- ✅ 16 hyperspace wave LaTeX files
+- ✅ 4 FTL Lorentz transform wxMaxima files
+- ✅ Gravity connection formulas
+- ✅ Historical documentation
 
 
 
