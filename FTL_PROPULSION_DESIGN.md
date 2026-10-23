@@ -1,5 +1,11 @@
 # FTL Propulsion System Design
 
+> **2026 audit:** The scalar-energy mechanism used here is not established.
+> [The exact audit](audits/scalar_g/README.md) finds an energy-sign inconsistency,
+> gauge dependence, and an unbounded Hamiltonian in the simplest physical
+> quadratic completion. The specifications below are historical hypotheses,
+> not engineering requirements derived from a validated mechanism.
+
 **Based on:** Unified Biquaternion Theory and Hyperspace Waves  
 **Date:** November 2, 2025  
 **Status:** Theoretical Design  

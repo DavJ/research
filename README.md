@@ -3,6 +3,15 @@ files related to my research
 #author David Jaros
 #URL http://www.octonion-multiverse.com/ 
 
+## Scalar G and energy audit (October 2026)
+
+[Exact derivation and reproducible checks](audits/scalar_g/README.md) identify
+an energy-sign inconsistency and a gauge-dependence obstruction in the historical
+scalar-field model. The simplest unrestricted quadratic dynamical completion
+also has unbounded energy. The original equations are preserved as historical
+sources. Earlier integration summaries and device specifications below are not
+validation of these physical claims; see the audit for its precise scope.
+
 ---
 
 ## 🚀 Theoretical Applications (November 2025)

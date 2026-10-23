@@ -1,0 +1,13 @@
+{
+  "base_commit": "eb22e826d26e6a10fc5905aef6cda43428cd4d24",
+  "sha256": {
+    "FTL-problem/pauli12.wxm": "ef9d98635a1df4fc9af0ec04779c548ff76540f0b83370fb1adbad7c2ef2caf8",
+    "theory-of-everything/latex/biquaternion-gradient.tex": "0ab9ce6410f96300edf5f2b6d6f00f224620fd2344ae15fc3250b1d40bc2262a",
+    "theory-of-everything/latex/biquaternion-vector-potential.tex": "252daf374c39dbbe447ebece163de7bace12784f289681a8ad53dc6742e6037c",
+    "theory-of-everything/latex/biquaternion-gradient-of-vector-potential.tex": "3f339b673c7571ef5105a1b339ab1ee0e19b477f86b6f4d63a4966ac74af0d52",
+    "theory-of-everything/latex/scalar-component.tex": "cec890e510e15b79e389e80d4f0fede70749f2f00afb1e42c7393e4c5bef8f34",
+    "theory-of-everything/latex/energy-simple-calculation.tex": "bbc083caccb0d8a35a769616d284e91037fecb6f5776b0dce2ac62b9ab07b37d",
+    "theory-of-everything/latex/energy-real-G.tex": "c785e569066d10ff89a3f559915935dd5a412e1ff6bd34ccbfc71a597ded996c",
+    "theory-of-everything/latex/energy-complex-G.tex": "103d2b68c642f0bbfb75b139053a4552cf276f67bf826f7f5be2851fd1df39fa"
+  }
+}
