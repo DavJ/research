@@ -1,5 +1,10 @@
 # Comprehensive UBT (Unified Biquaternion Theory) Relevance Report
 
+> **2026 correction:** Relevance to UBT and existence of source files are not
+> mathematical or physical validation. The [scalar G audit](audits/scalar_g/README.md)
+> identifies errors and missing physical justification in claims discussed below.
+> This 2025 report is retained as historical integration guidance.
+
 **Repository:** DavJ/research  
 **Analysis Date:** November 1, 2025  
 **Analyzed by:** GitHub Copilot Agent  
