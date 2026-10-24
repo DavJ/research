@@ -1,4 +1,4 @@
-name: Scalar G audit
+name: Scalar energy and UBT gauge audit
 
 on:
   push:
@@ -31,4 +31,4 @@ jobs:
           cache: pip
           cache-dependency-path: audits/scalar_g/requirements.txt
       - run: python -m pip install -r audits/scalar_g/requirements.txt
-      - run: python -B audits/scalar_g/audit_checks.py -v
+      - run: python -B -m unittest discover -s audits/scalar_g -p '*checks.py' -v

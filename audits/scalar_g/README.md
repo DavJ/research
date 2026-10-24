@@ -17,6 +17,11 @@ možné skalární teorie nebo současnou samostatnou UBT.
 
 ## Scope and reproduction
 
+The 2026-10-24 continuation compares the newer UBT Dirac candidate with charge,
+coframe and gauge-constraint requirements: [English](ubt_dirac_charge_gate.en.md)
+and [Czech](ubt_dirac_charge_gate.cs.md). Its 14 checks supplement the 18 original
+checks here; the result does not promote that candidate to a selected theory.
+
 The original `.tex`, `.wxm`, and image sources remain unchanged. Their SHA-256
 hashes are in [source_manifest.json](source_manifest.json). Equations are manually
 transcribed into [audit_checks.py](audit_checks.py); the code is not a TeX parser.
@@ -28,9 +33,10 @@ From the repository root, with Python 3.12:
 python -m venv .venv-scalar-g
 .venv-scalar-g/bin/python -m pip install -r audits/scalar_g/requirements.txt
 .venv-scalar-g/bin/python -B audits/scalar_g/audit_checks.py -v
+.venv-scalar-g/bin/python -B -m unittest discover -s audits/scalar_g -p '*checks.py' -v
 ```
 
-The suite contains 18 exact symbolic checks, including an independent 2x2 matrix
+The original suite contains 18 exact symbolic checks, including an independent 2x2 matrix
 representation, differentiation of arbitrary smooth potentials, an explicit
 spatially decaying pure gauge, Euler-Lagrange equations, and a Legendre transform.
 It verifies the stated identities and counterexamples, not experimental physics
