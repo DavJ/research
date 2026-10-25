@@ -1,5 +1,11 @@
 # Teleportation Device Design (A-Field Cavity)
 
+> **2026 audit:** The scalar-energy mechanism used here is not established.
+> [The exact audit](audits/scalar_g/README.md) finds an energy-sign inconsistency,
+> gauge dependence, and an unbounded Hamiltonian in the simplest physical
+> quadratic completion. Neither object transfer nor its quoted probability
+> follows from the audited equations.
+
 **Based on:** Unified Biquaternion Theory - Scalar Field G Resonance  
 **Date:** November 2, 2025  
 **Status:** Highly Speculative Theoretical Design  

@@ -1,0 +1,31 @@
+{
+  "inspected_on": "2026-10-24",
+  "repository": "UBT-Institute/unified-biquaternion-theory",
+  "master_commit": "98324d24f503e29b463e52324cf38e3e23a850b1",
+  "sources": [
+    {
+      "path": "research_tracks/action_selection/antilinear_weyl_map.en.md",
+      "commit": "98324d24f503e29b463e52324cf38e3e23a850b1",
+      "blob_sha": "7d27068fddfd8af844dd3f8747e3cfccfb60c280",
+      "source_pr": 724,
+      "state_at_inspection": "merged",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/98324d24f503e29b463e52324cf38e3e23a850b1/research_tracks/action_selection/antilinear_weyl_map.en.md"
+    },
+    {
+      "path": "canonical/THEORY/canonical/canonical_metric_definition.tex",
+      "commit": "98324d24f503e29b463e52324cf38e3e23a850b1",
+      "blob_sha": "49e0b3fa0663c9be7a938efa686d1126900c1821",
+      "state_at_inspection": "master",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/98324d24f503e29b463e52324cf38e3e23a850b1/canonical/THEORY/canonical/canonical_metric_definition.tex"
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_positive_symplectic_pullback.en.md",
+      "commit": "801860a53e23e8e41d42d68dff9edc7ee9afd646",
+      "blob_sha": "3ecb163356ad56e1695e1dbcdee390cc52c7a1c7",
+      "source_pr": 726,
+      "state_at_inspection": "open draft",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/801860a53e23e8e41d42d68dff9edc7ee9afd646/research_tracks/action_selection/dirac_positive_symplectic_pullback.en.md"
+    }
+  ],
+  "scope": "Explicit selected-candidate comparison; no action, gauge quotient or new physical prediction derived."
+}

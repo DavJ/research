@@ -1,5 +1,9 @@
 # UBT Relevance - Quick Summary
 
+> **2026 correction:** The [scalar G and energy audit](audits/scalar_g/README.md)
+> supersedes validation claims about that historical scalar-energy mechanism.
+> This summary describes integration relevance, not proof of new physics.
+
 **Full Report:** See [UBT_RELEVANCE_REPORT.md](./UBT_RELEVANCE_REPORT.md)
 
 ## Key Finding
