@@ -1,0 +1,100 @@
+{
+  "as_of": "2026-10-25",
+  "scope": "DavJ/research and the linked UBT research continuation",
+  "research": {
+    "pr": 3,
+    "merged": true,
+    "merge_commit": "3ea0cad2c1f5b0ee78333e9c80e74b9225c3080f"
+  },
+  "ubt": {
+    "integration_pr": 730,
+    "merge_commit": "0313f10758d81b25c802d59f0a418ae035f5b80b",
+    "merged_prs": [
+      701,
+      703,
+      707,
+      725,
+      726,
+      728,
+      729,
+      507,
+      377
+    ],
+    "focused_ci": {
+      "run_id": 40153129264,
+      "conclusion": "success",
+      "tests": 32
+    },
+    "remaining_prs": [
+      {
+        "number": 660,
+        "title": "Docs: sync October 2026 status and scientific positioning",
+        "head": "10c84770f3178a58cc79fb38d29442ab3b52e560",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/660",
+        "reason_not_integrated": "Clean Git merge, but the patch deletes historical source/image files under ARCHIVE; preserve history and reconcile the stale documentation before integration."
+      },
+      {
+        "number": 659,
+        "title": "Docs: synchronize October 2026 UBT status and theory landscape",
+        "head": "f6dcf90c4f7c649eea39619477067b2ff5e30b0b",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/659",
+        "reason_not_integrated": "Conflicts in both CLAIMS_MATRIX editions, WHAT_IS_PROVED.md and the bilingual checker; stale status replacements need reconciliation with current results."
+      },
+      {
+        "number": 655,
+        "title": "Research: resolve theta roles, sharpen SU3 dynamics, and freeze CMB falsification",
+        "head": "194a2f84e818d4878be3d678508446f9c14ed9bc",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/655",
+        "reason_not_integrated": "Conflicts in CLAIMS.yaml and both existing SU(3) verifier files; preserve later scientific corrections and rerun the combined evidence."
+      },
+      {
+        "number": 652,
+        "title": "Verify chiral currents and winding covariance with interactions in Lean",
+        "head": "2733bf8ed658964e37e2f8010400d331c801a994",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/652",
+        "reason_not_integrated": "Provenance inventory conflict across a 97-file Lean/research change; its merged-tree verification and bilingual/provenance checks remain to be completed."
+      },
+      {
+        "number": 636,
+        "title": "docs: polish Czech textbook and fill appendices",
+        "head": "3c8aaa583cc062fce6b4bea1ae0f7a4c32c775a9",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/636",
+        "reason_not_integrated": "Conflicting official EN/CS textbook PDFs; merge source changes and rebuild both publications from the current combined sources."
+      },
+      {
+        "number": 624,
+        "title": "ci: deliver one textbook PDF and unblock red checks",
+        "head": "5d64897e22c33637677c10a7ee9523d0ae80de98",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/624",
+        "reason_not_integrated": "Conflicting workflows/Makefile plus master-triggered SMTP delivery; integrate the build changes without starting unrequested external email delivery."
+      },
+      {
+        "number": 373,
+        "title": "Add Kac-Moody level k derivation from UBT action S[\u0398] + update tracking docs (v67)",
+        "head": "75aee9ad26ade30a1986958838997fa8be9959c5",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/373",
+        "reason_not_integrated": "Conflicts involving archived alpha derivations, STATUS_ALPHA, LaTeX roots and the derivation index; reconcile with the current open action/level-selection status."
+      },
+      {
+        "number": 335,
+        "title": "[WIP] Derive N_eff = 12 from UBT action S[\u0398]",
+        "head": "9a387d960dba99f1e561e1e83bff5785eca72f61",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/335",
+        "reason_not_integrated": "Although Git can merge it, the mode-count verifier assumes the electromagnetic phase and colour multiplicity rather than deriving the constrained charged spectrum required by its first-principles N_eff claim."
+      },
+      {
+        "number": 292,
+        "title": "[WIP] Make UBT formulations first-class siblings with chronofactor",
+        "head": "905a85ac6d1594a753fc48270ff5e03d30eeb4b8",
+        "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/pull/292",
+        "reason_not_integrated": "The obsolete directory/chronofactor reorganization produces 1016 merge conflicts against the inspected master and would reactivate historical theory roots."
+      }
+    ],
+    "baseline_failures": [
+      "Broad bilingual parity has mismatches outside the seven imported pairs; no imported path appeared among the integration parity failures.",
+      "Master already has provenance/inventory/SHA integrity failures and LaTeX build failures.",
+      "The inspected master source ZIP was 12721727 bytes, exceeding its 12582912-byte gate."
+    ]
+  },
+  "caveat": "Merge status is not a scientific claim upgrade. No author attestation or human translation review has been fabricated."
+}

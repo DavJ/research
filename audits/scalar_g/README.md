@@ -22,10 +22,22 @@ coframe and gauge-constraint requirements: [English](ubt_dirac_charge_gate.en.md
 and [Czech](ubt_dirac_charge_gate.cs.md). Its 14 checks supplement the 18 original
 checks here; the result does not promote that candidate to a selected theory.
 
+The 2026-10-25 continuation derives the bulk and boundary Gauss generator in an
+explicit flat comparator, constructs nonzero Gaussian charge/flux data, and
+tests the energy after imposing its constraint: [English](full_gauss_energy_gate.en.md)
+and [Czech](full_gauss_energy_gate.cs.md). Its 19 checks bring the full suite to
+51. Gauss permits nonzero charge with boundary flux, but does not bound the
+unrestricted commuting Dirac energy. The comparator does not derive the
+single-Theta UBT connection or its physical statistics.
+
+The [merge snapshot](merge_state_2026-10-25.json) records merged work and the
+concrete blockers in older PRs; it is a dated repository snapshot.
+
 The original `.tex`, `.wxm`, and image sources remain unchanged. Their SHA-256
 hashes are in [source_manifest.json](source_manifest.json). Equations are manually
 transcribed into [audit_checks.py](audit_checks.py); the code is not a TeX parser.
-The standalone `unified-biquaternion-theory` repository is outside this audit.
+The historical-source audit is limited to this repository. The continuations
+use pinned UBT sources for their explicitly stated comparisons.
 
 From the repository root, with Python 3.12:
 
