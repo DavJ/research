@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-25",
+  "research_input_commit": "3ea0cad2c1f5b0ee78333e9c80e74b9225c3080f",
+  "ubt_input_commit": "0313f10758d81b25c802d59f0a418ae035f5b80b",
+  "ubt_sources": [
+    {
+      "path": "canonical/CANONICAL_DEFINITIONS.md",
+      "blob_sha": "1b9e057d3f631fdbcce49bee9d6576e6f15cdcd6",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/0313f10758d81b25c802d59f0a418ae035f5b80b/canonical/CANONICAL_DEFINITIONS.md",
+      "isError": false
+    },
+    {
+      "path": "research_tracks/action_selection/dirac_positive_symplectic_pullback.en.md",
+      "blob_sha": "a9b277489d5e505f10471eab0c07821ed68d2b11",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/0313f10758d81b25c802d59f0a418ae035f5b80b/research_tracks/action_selection/dirac_positive_symplectic_pullback.en.md",
+      "isError": false
+    },
+    {
+      "path": "research_tracks/action_selection/torsion_trace_dirac_flux.en.md",
+      "blob_sha": "39a28b57cfe227f4a7f9ac9b8cf9512a6728a3c4",
+      "url": "https://github.com/UBT-Institute/unified-biquaternion-theory/blob/0313f10758d81b25c802d59f0a418ae035f5b80b/research_tracks/action_selection/torsion_trace_dirac_flux.en.md",
+      "isError": false
+    }
+  ],
+  "primary_background_sources": [
+    {
+      "url": "https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S6.html",
+      "role": "Standard constrained Maxwell Hamiltonian and Gauss law; the explicit sign convention is derived in the note."
+    },
+    {
+      "url": "https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S5.html",
+      "role": "Dirac quantization and the distinction between commuting and fermionic fields."
+    }
+  ],
+  "scope": "An independently specified flat Maxwell/commuting-Dirac comparator; no derivation of the UBT action, composite connection or physical coframe."
+}
